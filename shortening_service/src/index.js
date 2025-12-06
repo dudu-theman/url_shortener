@@ -40,3 +40,9 @@ app.post('/api/shorten', async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
+
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`URL Shortening Service running on port ${PORT}`);
+});
