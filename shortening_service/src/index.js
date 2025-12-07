@@ -28,7 +28,7 @@ app.post('/api/shorten', async (req, res) => {
             [shortCode, url]
         );
 
-        const shortUrl = `${process.env.BASE_URL || 'http://localhost'}/${shortCode}`;
+        const shortUrl = `${process.env.BASE_URL || 'http://localhost'}${shortCode}`;
 
         res.status(201).json({
             shortCode,
