@@ -24,7 +24,7 @@ app.get('/:shortCode', async (req, res) => {
             return res.status(404).json({ error: 'Short URL not found' });
         }
 
-        originalUrl = result.rows[0][original_url];
+        originalUrl = result.rows[0].original_url;
 
         res.redirect(301, originalUrl);
 
